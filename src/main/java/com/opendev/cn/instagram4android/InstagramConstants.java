@@ -8,6 +8,7 @@ public class InstagramConstants {
 
     public static final String API_URL = "https://i.instagram.com/api/v1/";
 
+    // TODO: Update the API Key to support 10.25.0, will require more reverse engineering
     public static final String API_KEY = "299a77ffe98a252a20e1fb6bc87df721b90fe70c4cb327391b2dacaffd187f99";
 
     //public static final String API_KEY = "b03e0daaf2ab17cda2a569cace938d639d1288a1197f9ecf97efd0a4ec0874d7";

@@ -55,6 +55,7 @@ public class InstagramDirectShareRequest extends InstagramRequest<StatusResult> 
         return "POST";
     }
 
+    // Construct relevent multipart body, build request and execute it
     @Override
     public StatusResult execute() throws IOException {
 
@@ -92,6 +93,12 @@ public class InstagramDirectShareRequest extends InstagramRequest<StatusResult> 
 
     }
 
+    /*
+    * Builds an HTTP request using the prvided MultipartBody
+    *
+    * @param MultipartBody body The body used as the POST payload
+    * @returns Request the completed HTTP web request
+    * */
     protected Request createHttpRequest(MultipartBody body) {
 
         String url = InstagramConstants.API_URL + getUrl();
