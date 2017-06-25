@@ -16,7 +16,7 @@ Do NOT use this for any illegal activities.
 ## Instructions
 
 ### Login
-```java
+```Java
 Instagram4Android instagram = Instagram4Android.builder().username(username).password(password).build();
 instagram.setup();
 instagram.login();
@@ -26,7 +26,7 @@ You must call ```setup()``` before ```login()``` otherwise an exception is throw
 
 Below is my implementation of logging in, using RxJava2 and RxAndroid while also utilising MVP:
 
-```java
+```Java
 Instagram4Android instagram = Instagram4Android.builder().username(username).password(password).build();
 Completable.fromAction(() -> instagram.setup())
         .subscribeOn(Schedulers.io())
@@ -40,7 +40,7 @@ Completable.fromAction(() -> instagram.setup())
 
 ### Get user info
 
-```java
+```Java
 InstagramSearchUsernameResult result = instagram.sendRequest(new InstagramSearchUsernameRequest("example_username");
 InstagramUser user = result.getUser();
 ```
@@ -49,7 +49,7 @@ Send the request using your ```Instagram4Android``` instance, and then call ```g
 
 ### Follow user
 
-```java
+```Java
 instagram.sendRequest(new InstagramFollowRequest(user.getPk()));
 ```
 
