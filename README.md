@@ -45,7 +45,7 @@ InstagramSearchUsernameResult result = instagram.sendRequest(new InstagramSearch
 InstagramUser user = result.getUser();
 ```
 
-Send the request using your ```Instagram4Android``` instance, and then call ```getUser()``` on the result.  Now poke around and see what info you can get from that ```user``` object!
+Send the request using your ```Instagram4Android``` instance, and then call ```getUser()``` on the result.  Now poke around and see what info you can get from that ```user``` object.
 
 ### Follow user
 
