@@ -1,6 +1,6 @@
 # Instagram4Android
 
-[![](https://jitpack.io/v/charlieAndroidDev/Instagram4Android.svg)](https://jitpack.io/#charlieAndroidDev/Instagram4Android)
+[![](https://jitpack.io/v/charlieAndroidDev/Instagram4Android.svg?style=flat-square)](https://jitpack.io/#charlieAndroidDev/Instagram4Android)  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1024px-Instagram_logo_2016.svg.png" alt="Drawing" width="200" height="200"/>
 
