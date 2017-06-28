@@ -1,5 +1,7 @@
 # Instagram4Android
 
+[![](https://jitpack.io/v/charlieAndroidDev/Instagram4Android.svg)](https://jitpack.io/#charlieAndroidDev/Instagram4Android)
+
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1024px-Instagram_logo_2016.svg.png" alt="Drawing" width="200" height="200"/>
 
 This library directly talks to the private Instagram API, anything (well quite a lot) you can do on the IG app you can replicate with this library.  You also bypass the public API's rate limits. 
@@ -12,6 +14,25 @@ Project not in any way afilliated with Instagram.
 ## Fair Use
 Do NOT use this to spam anyone at all.<br/>
 Do NOT use this for any illegal activities.
+
+## Installation
+
+Add the following to your root ```build.gradle``` file:
+```
+allprojects {
+    repositories {
+	...
+	maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+Then add the following to your app level ```build.gradle``` file, use the version number of the latest release:
+```
+dependencies {
+    compile 'com.github.charlieAndroidDev:Instagram4Android:v0.X.X'
+}
+```
 
 ## Instructions
 
