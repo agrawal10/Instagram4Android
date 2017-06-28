@@ -46,7 +46,7 @@ private void loginToInstagram(final String username, final String password) {
 
     }
 
-    public Observable<InstagramLoginResult> attemptLogin(final Instagram4Android instagram, final String username, final String password) {
+private Observable<InstagramLoginResult> attemptLogin(final Instagram4Android instagram, final String username, final String password) {
 
         Observable<InstagramLoginResult> observable = Observable.create(observableEmitter -> {
 
