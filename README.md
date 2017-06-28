@@ -18,7 +18,7 @@ Do NOT use this for any illegal activities.
 ## Installation
 
 Add the following to your root ```build.gradle``` file:
-```
+```Gradle
 allprojects {
     repositories {
 	...
@@ -28,7 +28,7 @@ allprojects {
 ```
 
 Then add the following to your app level ```build.gradle``` file, use the version number of the latest release:
-```
+```Gradle
 dependencies {
     compile 'com.github.charlieAndroidDev:Instagram4Android:v0.1.4'
 }
