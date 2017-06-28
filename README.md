@@ -24,19 +24,43 @@ instagram.login();
 
 You must call ```setup()``` before ```login()``` otherwise an exception is thrown.
 
-Below is my implementation of logging in, using RxJava2 and RxAndroid while also utilising MVP:
+Below is my implementation of logging in to Instagram in my presenter (MVP) using RxJava2 and RxAndroid:
 
 ```Java
-Instagram4Android instagram = Instagram4Android.builder().username(username).password(password).build();
-Completable.fromAction(() -> instagram.setup())
-        .subscribeOn(Schedulers.io())
-        .observeOn(AndroidSchedulers.mainThread())
-        .subscribe(() ->
-                Completable.fromAction(() -> instagram.login())
-                        .subscribeOn(Schedulers.io())
-                        .observeOn(AndroidSchedulers.mainThread())
-                        .subscribe(() -> view.loginFinished(instagram)));        
+private void loginToInstagram(final String username, final String password) {
+
+        Instagram4Android instagram = Instagram4Android.builder().username(username).password(password).build();
+
+        attemptLogin(instagram, username, password)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(instagramLoginResult -> {
+
+                    if(instagramLoginResult.getStatus().equals(view.getStringResource(R.string.login_success))) {
+                        view.loginFinished(instagram);
+                    } else {
+                        view.loginFailed(instagramLoginResult.getMessage());
+                    }
+
+                });
+
+    }
+
+    public Observable<InstagramLoginResult> attemptLogin(final Instagram4Android instagram, final String username, final String password) {
+
+        Observable<InstagramLoginResult> observable = Observable.create(observableEmitter -> {
+
+            instagram.setup();
+            observableEmitter.onNext(instagram.login());
+
+        });
+
+        return observable;
+
+    }       
 ```
+
+The String resource ```R.string.login_success``` is ```"ok"```.
 
 ### Get user info
 
