@@ -4,6 +4,7 @@ import dev.niekirk.com.instagram4android.InstagramConstants;
 import dev.niekirk.com.instagram4android.requests.payload.InstagramGetUserFollowersResult;
 
 import lombok.AllArgsConstructor;
+import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
 /**
@@ -14,6 +15,7 @@ import lombok.RequiredArgsConstructor;
 @AllArgsConstructor
 public class InstagramGetUserFollowingRequest extends InstagramGetRequest<InstagramGetUserFollowersResult> {
 
+    @NonNull
     private long userId;
     private String maxId;
 

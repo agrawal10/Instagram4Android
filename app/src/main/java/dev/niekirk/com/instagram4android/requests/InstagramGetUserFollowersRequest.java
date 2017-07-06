@@ -3,6 +3,7 @@ package dev.niekirk.com.instagram4android.requests;
 import dev.niekirk.com.instagram4android.requests.payload.InstagramGetUserFollowersResult;
 
 import lombok.AllArgsConstructor;
+import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 
@@ -14,6 +15,7 @@ import lombok.SneakyThrows;
 @AllArgsConstructor
 public class InstagramGetUserFollowersRequest extends InstagramGetRequest<InstagramGetUserFollowersResult> {
 
+    @NonNull
     private long userId;
     private String maxId;
 
