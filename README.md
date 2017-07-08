@@ -53,8 +53,8 @@ private void loginToInstagram(final String username, final String password) {
         Instagram4Android instagram = Instagram4Android.builder().username(username).password(password).build();
 
         attemptLogin(instagram, username, password)
-                .observeOn(Schedulers.io())
-                .subscribeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(instagramLoginResult -> {
 
                     if(instagramLoginResult.getStatus().equals(view.getStringResource(R.string.login_success))) {
