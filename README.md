@@ -86,7 +86,7 @@ The String resource ```R.string.login_success``` is ```"ok"```.
 ### Get user info
 
 ```Java
-InstagramSearchUsernameResult result = instagram.sendRequest(new InstagramSearchUsernameRequest("example_username");
+InstagramSearchUsernameResult result = instagram.sendRequest(new InstagramSearchUsernameRequest("example_username"));
 InstagramUser user = result.getUser();
 ```
 
