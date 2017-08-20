@@ -77,11 +77,11 @@ public class Instagram4Android {
 
     public void setup() {
 
-        if (TextUtils.isEmpty(this.username)) {
+        if (this.username.length() < 1) {
             throw new IllegalArgumentException("Username is mandatory.");
         }
 
-        if (TextUtils.isEmpty(this.password)) {
+        if (this.password.length() < 1) {
             throw new IllegalArgumentException("Password is mandatory.");
         }
 
@@ -93,7 +93,7 @@ public class Instagram4Android {
 
                     @Override
                     public void saveFromResponse(HttpUrl url, List<Cookie> cookies) {
-                        Log.d("I4A", "Added cookies!");
+                        //Log.d("I4A", "Added cookies!");
                         cookieStore.addAll(cookies);
                     }
 
@@ -102,7 +102,7 @@ public class Instagram4Android {
                         List<Cookie> validCookies = new ArrayList<>();
                         for(Cookie cookie: cookieStore) {
 
-                            Log.d("I4A", "Cookie: " + cookie.name());
+                            //Log.d("I4A", "Cookie: " + cookie.name());
 
                             if(cookie.expiresAt() < System.currentTimeMillis()) {
 
@@ -121,7 +121,7 @@ public class Instagram4Android {
 
     public InstagramLoginResult login() throws IOException {
 
-        Log.d("LOGIN", "Logging with user " + username + " and password " + password.replaceAll("[a-zA-Z0-9]", "*"));
+        //Log.d("LOGIN", "Logging with user " + username + " and password " + password.replaceAll("[a-zA-Z0-9]", "*"));
 
         InstagramLoginPayload loginRequest = InstagramLoginPayload.builder().username(username)
                 .password(password)
@@ -173,7 +173,7 @@ public class Instagram4Android {
 
         for(Cookie cookie: client.cookieJar().loadForRequest(url)) {
 
-            Log.d("GETCOOKIE", "Name: " + cookie.name());
+//            Log.d("GETCOOKIE", "Name: " + cookie.name());
             if(cookie.name().equalsIgnoreCase("csrftoken")) {
                 return cookie;
             }

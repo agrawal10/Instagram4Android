@@ -108,7 +108,7 @@ public abstract class InstagramRequest<T> {
     public <U> U parseJson(String str, Class<U> clazz) {
         //log.info("Reading " + clazz.getSimpleName() + " from " + str);
         ObjectMapper objectMapper = new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-        Log.d("HELLO", str);
+//        Log.d("HELLO", str);
         return objectMapper.readValue(str, clazz);
     }
 

@@ -2,6 +2,7 @@ package dev.niekirk.com.instagram4android.requests.payload;
 
 import java.util.Objects;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
