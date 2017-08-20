@@ -6,12 +6,16 @@ import dev.niekirk.com.instagram4android.requests.payload.StatusResult;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 
 /**
  * Created by root on 09/06/17.
  */
 
+@AllArgsConstructor
+@RequiredArgsConstructor
 public class InstagramFollowRequest extends InstagramPostRequest<StatusResult> {
 
     private long userId;
