@@ -2,17 +2,27 @@ package dev.niekirk.com.instagram4android.requests;
 
 import dev.niekirk.com.instagram4android.requests.payload.StatusResult;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.SneakyThrows;
 
 /**
  * Created by root on 09/06/17.
  */
 
+@NoArgsConstructor
+@AllArgsConstructor
 public class InstagramTimelineFeedRequest extends InstagramGetRequest<StatusResult> {
+
+    private String maxId;
 
     @Override
     public String getUrl() {
-        return "feed/timeline/";
+        String url = "feed/timeline/";
+        if(!maxId.isEmpty()) {
+            url += "&max_id=" + maxId;
+        }
+        return url;
     }
 
     @Override
