@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.List;
 
 import dev.niekirk.com.instagram4android.requests.InstagramFollowRequest;
@@ -48,11 +49,15 @@ public class InstagramAndroidTest {
 
         InstagramSearchUsernameResult myUsernameResult = instagram4Android.sendRequest(new InstagramSearchUsernameRequest(USERNAME));
         List<InstagramUserSummary> following = instagram4Android.sendRequest(new InstagramGetUserFollowingRequest(myUsernameResult.getUser().getPk())).getUsers();
-        for(InstagramUserSummary summary : following) {
-            if(summary.getUsername().equalsIgnoreCase("davidbeckham")) {
-                assertEquals("David Beckham", summary.getFull_name());
+
+        for(Iterator<InstagramUserSummary> iterator = following.iterator(); iterator.hasNext(); ) {
+            InstagramUserSummary userSummary = iterator.next();
+            if(!userSummary.getUsername().equalsIgnoreCase("davidbeckham")) {
+                iterator.remove();
             }
         }
+
+        assertEquals(1, following.size());
     }
 
 }

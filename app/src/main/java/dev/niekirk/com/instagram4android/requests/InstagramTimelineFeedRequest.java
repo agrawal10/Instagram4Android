@@ -14,12 +14,12 @@ import lombok.SneakyThrows;
 @AllArgsConstructor
 public class InstagramTimelineFeedRequest extends InstagramGetRequest<StatusResult> {
 
-    private String maxId;
+    private String maxId = null;
 
     @Override
     public String getUrl() {
         String url = "feed/timeline/";
-        if(!maxId.isEmpty()) {
+        if(maxId != null && !maxId.isEmpty()) {
             url += "&max_id=" + maxId;
         }
         return url;
