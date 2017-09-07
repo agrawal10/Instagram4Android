@@ -1,5 +1,6 @@
 package dev.niekirk.com.instagram4android.requests;
 
+import dev.niekirk.com.instagram4android.requests.payload.InstagramFeedResult;
 import dev.niekirk.com.instagram4android.requests.payload.StatusResult;
 
 import lombok.AllArgsConstructor;
@@ -12,7 +13,7 @@ import lombok.SneakyThrows;
 
 @NoArgsConstructor
 @AllArgsConstructor
-public class InstagramTimelineFeedRequest extends InstagramGetRequest<StatusResult> {
+public class InstagramTimelineFeedRequest extends InstagramGetRequest<InstagramFeedResult> {
 
     private String maxId = null;
 
@@ -32,8 +33,8 @@ public class InstagramTimelineFeedRequest extends InstagramGetRequest<StatusResu
 
     @Override
     @SneakyThrows
-    public StatusResult parseResult(int statusCode, String content) {
-        return parseJson(statusCode, content, StatusResult.class);
+    public InstagramFeedResult parseResult(int statusCode, String content) {
+        return parseJson(statusCode, content, InstagramFeedResult.class);
     }
 
 }

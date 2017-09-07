@@ -25,8 +25,8 @@ import static org.junit.Assert.assertEquals;
 public class InstagramAndroidTest {
 
     // Replace with real credentials for actual testing
-    private static final String USERNAME = "XXXX";
-    private static final String PASSWORD = "XXXX";
+    private static final String USERNAME = "hrvyfanboy";
+    private static final String PASSWORD = "Tiggy759";
 
     private Instagram4Android instagram4Android;
 
