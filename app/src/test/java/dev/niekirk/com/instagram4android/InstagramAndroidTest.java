@@ -32,8 +32,8 @@ import static org.junit.Assert.assertEquals;
 public class InstagramAndroidTest {
 
     // Replace with real credentials for actual testing
-    private static final String USERNAME = "XXXX";
-    private static final String PASSWORD = "XXXX";
+    private static final String USERNAME = "hrvyfanboy";
+    private static final String PASSWORD = "Tiggy759";
 
     private Instagram4Android instagram4Android;
 
@@ -59,7 +59,12 @@ public class InstagramAndroidTest {
             }
             InstagramFeedResult feedResult = instagram4Android.sendRequest(new InstagramTimelineFeedRequest(maxId, null));
             for(InstagramTimelineFeedItem item : feedResult.getFeed_items()) {
-                System.out.println((item.getMedia_or_ad() == null) ? "NO" : item.getMedia_or_ad().getDevice_timestamp());
+                if(item.getMedia_or_ad() == null || item.getMedia_or_ad().getImage_versions2() == null ||
+                        item.getMedia_or_ad().getImage_versions2().getCandidates() == null) {
+                    System.out.println("NO");
+                } else {
+                    System.out.println(item.getMedia_or_ad().getImage_versions2().getCandidates().get(0).getUrl());
+                }
             }
 
             maxId = feedResult.getNext_max_id();

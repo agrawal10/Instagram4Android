@@ -28,7 +28,7 @@ public class InstagramFeedItem {
     public double video_duration;
     public Map<String, Object> attribution;
     public List<Object> video_versions;
-    public Map<String, Object> image_versions2;
+    public InstagramImageVersions_2 image_versions2;
     public Map<String, Object> usertags;
     public Map<String, Object> location;
     public float lng;
