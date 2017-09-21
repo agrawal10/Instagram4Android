@@ -72,7 +72,7 @@ public class InstagramTimelineFeedRequest extends InstagramRequest<InstagramFeed
                 .header("X-Ads-Opt-Out", "0")
                 .header("X-DEVICE-ID", InstagramHashUtil.generateDeviceId("gsdgds", "gsdgsd"))
                 .header("X-Google-AD-ID", InstagramHashUtil.generateDeviceId("ggdasgdsa", "gsfdsagas"))
-                .header("X-IG-INSTALLED-APPS", Base64.encodeToString("{\"1\":0,\"2\":0}".getBytes(), Base64.URL_SAFE))
+                .header("X-IG-INSTALLED-APPS", Base64.encodeToString("{\"1\":0,\"2\":0}".getBytes(), Base64.URL_SAFE | Base64.NO_WRAP))
                 .post(body)
                 .build();
     }

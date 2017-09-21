@@ -88,8 +88,8 @@
       <file leaf-file-name="InstagramTimelineFeedRequest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/InstagramTimelineFeedRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="71" column="45" lean-forward="true" selection-start-line="71" selection-start-column="45" selection-end-line="71" selection-end-column="45" />
+            <state relative-caret-position="468">
+              <caret line="72" column="94" lean-forward="true" selection-start-line="72" selection-start-column="94" selection-end-line="72" selection-end-column="94" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -2238,7 +2238,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1506010920642" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1506011455514" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2286,7 +2286,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1506010920642" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1506011455514" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2469,7 +2469,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1506010920643" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1506011455515" />
       </method>
     </configuration>
     <configuration default="false" name="InstagramTest" type="AndroidJUnit" factoryName="Android JUnit">
@@ -2618,7 +2618,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506008871065</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Fixed Base64 error in TimelineFeedRequest.">
+      <created>1506010926453</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1506010926453</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -3111,8 +3118,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/InstagramTimelineFeedRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="71" column="45" lean-forward="true" selection-start-line="71" selection-start-column="45" selection-end-line="71" selection-end-column="45" />
+        <state relative-caret-position="468">
+          <caret line="72" column="94" lean-forward="true" selection-start-line="72" selection-start-column="94" selection-end-line="72" selection-end-column="94" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
