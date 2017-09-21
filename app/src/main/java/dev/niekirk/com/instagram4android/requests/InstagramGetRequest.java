@@ -7,6 +7,7 @@ import dev.niekirk.com.instagram4android.InstagramConstants;
 import java.io.IOException;
 
 import okhttp3.Request;
+import okhttp3.RequestBody;
 import okhttp3.Response;
 
 /**

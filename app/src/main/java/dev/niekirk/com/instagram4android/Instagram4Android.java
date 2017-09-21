@@ -148,7 +148,7 @@ public class Instagram4Android {
 
             this.sendRequest(new InstagramSyncFeaturesRequest(syncFeatures));
             this.sendRequest(new InstagramAutoCompleteUserListRequest());
-            this.sendRequest(new InstagramTimelineFeedRequest());
+            //this.sendRequest(new InstagramTimelineFeedRequest());
             this.sendRequest(new InstagramGetInboxRequest());
             this.sendRequest(new InstagramGetRecentActivityRequest());
         }

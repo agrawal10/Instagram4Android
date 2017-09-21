@@ -15,13 +15,12 @@ import lombok.ToString;
 @ToString(callSuper = true)
 public class InstagramFeedResult extends StatusResult {
 
-    private boolean auto_load_more_enabled;
     private int num_results;
+    private boolean auto_load_more_enabled;
+    private boolean more_available;
+    //private boolean is_direct_v2_enabled;
     private String next_max_id;
 
-    private List<InstagramFeedItem> items;
-    private List<InstagramFeedItem> ranked_items;
-
-    private boolean more_available;
+    private List<InstagramTimelineFeedItem> feed_items;
 
 }

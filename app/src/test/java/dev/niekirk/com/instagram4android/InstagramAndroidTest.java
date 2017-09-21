@@ -3,16 +3,23 @@ package dev.niekirk.com.instagram4android;
 import android.util.Log;
 
 import org.junit.Before;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 import dev.niekirk.com.instagram4android.requests.InstagramFollowRequest;
 import dev.niekirk.com.instagram4android.requests.InstagramGetUserFollowingRequest;
 import dev.niekirk.com.instagram4android.requests.InstagramSearchUsernameRequest;
+import dev.niekirk.com.instagram4android.requests.InstagramTimelineFeedRequest;
+import dev.niekirk.com.instagram4android.requests.payload.InstagramFeedItem;
+import dev.niekirk.com.instagram4android.requests.payload.InstagramFeedResult;
 import dev.niekirk.com.instagram4android.requests.payload.InstagramSearchUsernameResult;
+import dev.niekirk.com.instagram4android.requests.payload.InstagramTimelineFeedItem;
 import dev.niekirk.com.instagram4android.requests.payload.InstagramUser;
 import dev.niekirk.com.instagram4android.requests.payload.InstagramUserSummary;
 
@@ -25,8 +32,8 @@ import static org.junit.Assert.assertEquals;
 public class InstagramAndroidTest {
 
     // Replace with real credentials for actual testing
-    private static final String USERNAME = "hrvyfanboy";
-    private static final String PASSWORD = "Tiggy759";
+    private static final String USERNAME = "XXXX";
+    private static final String PASSWORD = "XXXX";
 
     private Instagram4Android instagram4Android;
 
@@ -37,10 +44,31 @@ public class InstagramAndroidTest {
         try {
             instagram4Android.login();
         } catch (IOException e) {
-            Log.e("TEST", e.getLocalizedMessage());
+            //System.out.println(e.getMessage());
         }
     }
 
+    @Test
+    public void fixesImplementedCorrectly() throws IOException, InterruptedException {
+
+        String maxId = null;
+
+        for(int i = 0; i < 4; i++) {
+            if(i > 0) {
+                System.out.println("MAX ID: " + maxId);
+            }
+            InstagramFeedResult feedResult = instagram4Android.sendRequest(new InstagramTimelineFeedRequest(maxId, null));
+            for(InstagramTimelineFeedItem item : feedResult.getFeed_items()) {
+                System.out.println((item.getMedia_or_ad() == null) ? "NO" : item.getMedia_or_ad().getDevice_timestamp());
+            }
+
+            maxId = feedResult.getNext_max_id();
+            Thread.sleep(5000);
+        }
+        assertEquals(1 , 1);
+    }
+
+    /*
     @Test
     public void instagramFollowUserWorksAsExpected() throws IOException {
         InstagramSearchUsernameResult usernameResult = instagram4Android.sendRequest(new InstagramSearchUsernameRequest("davidbeckham"));
@@ -58,6 +86,6 @@ public class InstagramAndroidTest {
         }
 
         assertEquals(1, following.size());
-    }
+    }*/
 
 }
