@@ -10,6 +10,7 @@ import java.util.TimeZone;
 import dev.niekirk.com.instagram4android.InstagramConstants;
 import dev.niekirk.com.instagram4android.requests.payload.InstagramFeedResult;
 
+import dev.niekirk.com.instagram4android.requests.payload.InstagramTimelineFeedResult;
 import dev.niekirk.com.instagram4android.util.InstagramHashUtil;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -25,7 +26,7 @@ import okhttp3.Response;
 
 @NoArgsConstructor
 @AllArgsConstructor
-public class InstagramTimelineFeedRequest extends InstagramRequest<InstagramFeedResult> {
+public class InstagramTimelineFeedRequest extends InstagramRequest<InstagramTimelineFeedResult> {
 
     private String maxId = null;
     private List<String> seen_posts = null;
@@ -41,7 +42,7 @@ public class InstagramTimelineFeedRequest extends InstagramRequest<InstagramFeed
     }
 
     @Override
-    public InstagramFeedResult execute() throws IOException {
+    public InstagramTimelineFeedResult execute() throws IOException {
         System.out.println("EXEC CALLED");
         Request request = createRequest(createRequestBody());
 
@@ -139,8 +140,8 @@ public class InstagramTimelineFeedRequest extends InstagramRequest<InstagramFeed
 
     @Override
     @SneakyThrows
-    public InstagramFeedResult parseResult(int statusCode, String content) {
-        return parseJson(statusCode, content, InstagramFeedResult.class);
+    public InstagramTimelineFeedResult parseResult(int statusCode, String content) {
+        return parseJson(statusCode, content, InstagramTimelineFeedResult.class);
     }
 
 }

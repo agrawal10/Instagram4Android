@@ -7,13 +7,13 @@ import lombok.Setter;
 import lombok.ToString;
 
 /**
- * Created by root on 08/06/17.
+ * Created by root on 22/09/17.
  */
 
 @Getter
 @Setter
 @ToString(callSuper = true)
-public class InstagramFeedResult extends StatusResult {
+public class InstagramTimelineFeedResult extends StatusResult {
 
     private int num_results;
     private boolean auto_load_more_enabled;
@@ -21,6 +21,6 @@ public class InstagramFeedResult extends StatusResult {
     //private boolean is_direct_v2_enabled;
     private String next_max_id;
 
-    private List<InstagramFeedItem> items;
+    private List<InstagramTimelineFeedItem> feed_items;
 
 }

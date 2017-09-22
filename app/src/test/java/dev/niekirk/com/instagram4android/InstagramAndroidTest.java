@@ -16,10 +16,12 @@ import dev.niekirk.com.instagram4android.requests.InstagramFollowRequest;
 import dev.niekirk.com.instagram4android.requests.InstagramGetUserFollowingRequest;
 import dev.niekirk.com.instagram4android.requests.InstagramSearchUsernameRequest;
 import dev.niekirk.com.instagram4android.requests.InstagramTimelineFeedRequest;
+import dev.niekirk.com.instagram4android.requests.InstagramUserFeedRequest;
 import dev.niekirk.com.instagram4android.requests.payload.InstagramFeedItem;
 import dev.niekirk.com.instagram4android.requests.payload.InstagramFeedResult;
 import dev.niekirk.com.instagram4android.requests.payload.InstagramSearchUsernameResult;
 import dev.niekirk.com.instagram4android.requests.payload.InstagramTimelineFeedItem;
+import dev.niekirk.com.instagram4android.requests.payload.InstagramTimelineFeedResult;
 import dev.niekirk.com.instagram4android.requests.payload.InstagramUser;
 import dev.niekirk.com.instagram4android.requests.payload.InstagramUserSummary;
 
@@ -32,8 +34,8 @@ import static org.junit.Assert.assertEquals;
 public class InstagramAndroidTest {
 
     // Replace with real credentials for actual testing
-    private static final String USERNAME = "hrvyfanboy";
-    private static final String PASSWORD = "Tiggy759";
+    private static final String USERNAME = "XXXX";
+    private static final String PASSWORD = "XXXX";
 
     private Instagram4Android instagram4Android;
 
@@ -49,6 +51,16 @@ public class InstagramAndroidTest {
     }
 
     @Test
+    public void userFeedResultWorking() throws IOException {
+        InstagramFeedResult result = instagram4Android.sendRequest(new InstagramUserFeedRequest(instagram4Android.getUserId(), null, 0L));
+        if(result != null) {
+            System.out.println(result.getItems().get(0).getImage_versions2().getCandidates().get(0).getUrl());
+        }
+        assertEquals(1, 1);
+    }
+
+    /*
+    @Test
     public void fixesImplementedCorrectly() throws IOException, InterruptedException {
 
         String maxId = null;
@@ -57,7 +69,7 @@ public class InstagramAndroidTest {
             if(i > 0) {
                 System.out.println("MAX ID: " + maxId);
             }
-            InstagramFeedResult feedResult = instagram4Android.sendRequest(new InstagramTimelineFeedRequest(maxId, null));
+            InstagramTimelineFeedResult feedResult = instagram4Android.sendRequest(new InstagramTimelineFeedRequest(maxId, null));
             for(InstagramTimelineFeedItem item : feedResult.getFeed_items()) {
                 if(item.getMedia_or_ad() == null || item.getMedia_or_ad().getImage_versions2() == null ||
                         item.getMedia_or_ad().getImage_versions2().getCandidates() == null) {
@@ -71,7 +83,7 @@ public class InstagramAndroidTest {
             Thread.sleep(5000);
         }
         assertEquals(1 , 1);
-    }
+    }*/
 
     /*
     @Test
