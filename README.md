@@ -30,7 +30,7 @@ allprojects {
 Then add the following to your app level ```build.gradle``` file, use the version number of the latest release:
 ```Gradle
 dependencies {
-    compile 'com.github.charlieAndroidDev:Instagram4Android:v0.1.20'
+    compile 'com.github.charlieAndroidDev:Instagram4Android:v0.1.21'
 }
 ```
 
