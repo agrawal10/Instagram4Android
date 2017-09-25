@@ -102,7 +102,7 @@ Very simple.
 
 ### Get stories (the ones you see at the top of your homepage)
 
-```
+```Java
 InstagramReelsTrayFeedResult result = instagram4Android.sendRequest(new InstagramReelsTrayRequest());
 List<InstagramStoryTray> trays = result.getTray();
 ```
