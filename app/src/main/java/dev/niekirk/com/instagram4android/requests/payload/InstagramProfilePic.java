@@ -1,5 +1,7 @@
 package dev.niekirk.com.instagram4android.requests.payload;
 
+import java.io.Serializable;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -11,7 +13,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString(callSuper = true)
-public class InstagramProfilePic {
+public class InstagramProfilePic implements Serializable {
 
     public String url;
     public int width;

@@ -1,5 +1,6 @@
 package dev.niekirk.com.instagram4android.requests.payload;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 import lombok.EqualsAndHashCode;
@@ -14,7 +15,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString(callSuper = true)
-public class InstagramUserSummary {
+public class InstagramUserSummary implements Serializable {
     public boolean is_verified;
     public String profile_pic_id;
     public boolean is_favorite;

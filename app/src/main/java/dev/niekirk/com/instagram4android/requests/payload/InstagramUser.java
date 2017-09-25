@@ -1,5 +1,6 @@
 package dev.niekirk.com.instagram4android.requests.payload;
 
+import java.io.Serializable;
 import java.util.List;
 
 import lombok.Getter;
@@ -13,7 +14,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString(callSuper = true)
-public class InstagramUser {
+public class InstagramUser implements Serializable {
     public boolean is_private;
     public boolean is_verified;
     public String username;
