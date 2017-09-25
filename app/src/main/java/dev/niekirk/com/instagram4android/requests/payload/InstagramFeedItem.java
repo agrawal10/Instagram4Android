@@ -30,7 +30,7 @@ public class InstagramFeedItem implements Serializable {
     public boolean has_audio;
     public double video_duration;
     public Map<String, Object> attribution;
-    public InstagramVideoVersions video_versions;
+    public List<InstagramVideoVersions> video_versions;
     public InstagramImageVersions_2 image_versions2;
     public Map<String, Object> usertags;
     public Map<String, Object> location;

@@ -37,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/test/java/dev/niekirk/com/instagram4android/InstagramAndroidTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="338">
-              <caret line="44" column="30" lean-forward="true" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
+              <caret line="44" column="30" lean-forward="false" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -48,8 +48,8 @@
       <file leaf-file-name="InstagramFeedItem.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramFeedItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+            <state relative-caret-position="337">
+              <caret line="32" column="55" lean-forward="true" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -2160,7 +2160,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1506359752995" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1506360685464" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2208,7 +2208,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1506359752995" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1506360685464" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2391,7 +2391,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1506359752996" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1506360685465" />
       </method>
     </configuration>
     <configuration default="false" name="InstagramTest" type="AndroidJUnit" factoryName="Android JUnit">
@@ -2589,7 +2589,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506357540112</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="InstagramFeedItem now implements Serializable">
+      <created>1506359772764</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1506359772764</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -2712,7 +2719,8 @@
     <MESSAGE value="Added ability to retrieve stories." />
     <MESSAGE value="Fixed small issue with stories." />
     <MESSAGE value="Fixed story videos issue." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed story videos issue." />
+    <MESSAGE value="InstagramFeedItem now implements Serializable" />
+    <option name="LAST_COMMIT_MESSAGE" value="InstagramFeedItem now implements Serializable" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -3086,7 +3094,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/test/java/dev/niekirk/com/instagram4android/InstagramAndroidTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
-          <caret line="44" column="30" lean-forward="true" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
+          <caret line="44" column="30" lean-forward="false" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -3095,8 +3103,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramFeedItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+        <state relative-caret-position="337">
+          <caret line="32" column="55" lean-forward="true" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
           <folding />
         </state>
       </provider>
