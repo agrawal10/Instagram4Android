@@ -111,7 +111,7 @@ List<InstagramStoryTray> trays = result.getTray();
 
 To get the rest of the story items for everyone in your reel tray do this:
 
-```
+```Java
 InstagramReelsTrayFeedResult result = instagram4Android.sendRequest(new InstagramReelsTrayRequest());
 List<InstagramStoryTray> trays = result.getTray();
 
