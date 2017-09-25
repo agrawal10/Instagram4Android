@@ -1,22 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="07b73948-5cd6-42ba-900c-ab525688792c" name="Default" comment="Fixed error with InstagramUserFeedRequest.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/InstagramReelsTrayRequest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/InstagramUserStoryFeedRequest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramBroadcast.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramBroadcastOwner.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramDismissCard.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramFriendshipStatus.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramLocation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramOwner.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramPostLive.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramPostLiveItem.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramReel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramReelsTrayFeedResult.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramStoryTray.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramUserStoryFeedResult.java" />
+    <list default="true" id="07b73948-5cd6-42ba-900c-ab525688792c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramPostLiveItem.java" afterPath="$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramPostLiveItem.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/test/java/dev/niekirk/com/instagram4android/InstagramAndroidTest.java" afterPath="$PROJECT_DIR$/app/src/test/java/dev/niekirk/com/instagram4android/InstagramAndroidTest.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,8 +37,8 @@
       <file leaf-file-name="InstagramAndroidTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/test/java/dev/niekirk/com/instagram4android/InstagramAndroidTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="25" column="48" lean-forward="true" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
+            <state relative-caret-position="234">
+              <caret line="49" column="41" lean-forward="true" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -59,10 +46,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="InstagramPostLiveItem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramPostLiveItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="InstagramUserStoryFeedResult.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramUserStoryFeedResult.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
+            <state relative-caret-position="156">
               <caret line="9" column="3" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -71,10 +68,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52">
+              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="InstagramUserStoryFeedRequest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/InstagramUserStoryFeedRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
+            <state relative-caret-position="130">
               <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -88,7 +95,7 @@
       <file leaf-file-name="InstagramStoryTray.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramStoryTray.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
+            <state relative-caret-position="416">
               <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -100,21 +107,9 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="26">
+            <state relative-caret-position="312">
               <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InstagramBroadcast.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramBroadcast.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="556">
-              <caret line="28" column="37" lean-forward="false" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -122,7 +117,7 @@
       <file leaf-file-name="Instagram4Android.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/Instagram4Android.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
+            <state relative-caret-position="4134">
               <caret line="190" column="0" lean-forward="false" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
               <folding />
             </state>
@@ -132,7 +127,7 @@
       <file leaf-file-name="InstagramReelsTrayRequest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/InstagramReelsTrayRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
+            <state relative-caret-position="494">
               <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
                 <element signature="e#324#325#0" expanded="true" />
@@ -145,18 +140,8 @@
       <file leaf-file-name="InstagramGetUserFollowersRequest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/InstagramGetUserFollowersRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
+            <state relative-caret-position="338">
               <caret line="18" column="24" lean-forward="false" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InstagramUser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramUser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="24" column="28" lean-forward="false" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -1950,7 +1935,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramLocation.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramOwner.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramDismissCard.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramPostLiveItem.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramPostLive.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramReelsTrayFeedResult.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/InstagramReelsTrayResult.java" />
@@ -1960,6 +1944,7 @@
         <option value="$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramUserStoryFeedResponse.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/InstagramUserStoryFeedRequest.java" />
         <option value="$PROJECT_DIR$/app/src/test/java/dev/niekirk/com/instagram4android/InstagramAndroidTest.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramPostLiveItem.java" />
       </list>
     </option>
   </component>
@@ -1983,6 +1968,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2088,8 +2075,6 @@
         </subPane>
       </pane>
       <pane id="ProjectPane" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -2181,7 +2166,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1506269939582" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1506348894405" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2229,7 +2214,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1506269939582" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1506348894405" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2261,27 +2246,6 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -2412,7 +2376,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1506269939583" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1506348894407" />
       </method>
     </configuration>
     <configuration default="false" name="InstagramTest" type="AndroidJUnit" factoryName="Android JUnit">
@@ -2589,22 +2553,17 @@
       <option name="project" value="LOCAL" />
       <updated>1506107378371</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Added ability to retrieve stories.">
+      <created>1506269969115</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1506269969115</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="InstagramTest - 2017.09.24 at 12h 43m 31s.xml">
-      <configuration name="InstagramTest" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="InstagramTest - 2017.09.24 at 12h 43m 59s.xml">
-      <configuration name="InstagramTest" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="InstagramTest - 2017.09.24 at 12h 44m 10s.xml">
-      <configuration name="InstagramTest" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="InstagramTest - 2017.09.24 at 12h 46m 05s.xml">
-      <configuration name="InstagramTest" configurationId="AndroidJUnit" />
-    </history-entry>
     <history-entry file="InstagramTest - 2017.09.24 at 12h 56m 54s.xml">
       <configuration name="InstagramTest" configurationId="AndroidJUnit" />
     </history-entry>
@@ -2621,6 +2580,18 @@
       <configuration name="InstagramTest" configurationId="AndroidJUnit" />
     </history-entry>
     <history-entry file="InstagramTest - 2017.09.24 at 13h 16m 35s.xml">
+      <configuration name="InstagramTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="InstagramTest - 2017.09.25 at 11h 11m 05s.xml">
+      <configuration name="InstagramTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="InstagramTest - 2017.09.25 at 11h 11m 30s.xml">
+      <configuration name="InstagramTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="InstagramTest - 2017.09.25 at 11h 13m 22s.xml">
+      <configuration name="InstagramTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="InstagramTest - 2017.09.25 at 11h 14m 42s.xml">
       <configuration name="InstagramTest" configurationId="AndroidJUnit" />
     </history-entry>
   </component>
@@ -2709,7 +2680,8 @@
     <MESSAGE value="Fixed pagination for TimelineFeedRequest." />
     <MESSAGE value="Fixed Base64 error in TimelineFeedRequest." />
     <MESSAGE value="Fixed error with InstagramUserFeedRequest." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed error with InstagramUserFeedRequest." />
+    <MESSAGE value="Added ability to retrieve stories." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added ability to retrieve stories." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2797,9 +2769,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
           <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2845,9 +2814,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
           <caret line="24" column="32" lean-forward="false" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2855,7 +2821,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
           <caret line="26" column="23" lean-forward="false" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2863,7 +2828,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2891,9 +2855,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2909,9 +2870,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
           <caret line="20" column="43" lean-forward="false" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2919,9 +2877,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3042">
           <caret line="139" column="0" lean-forward="false" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2929,7 +2884,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2937,25 +2891,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2963,9 +2898,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2973,9 +2905,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2991,9 +2920,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
           <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3001,9 +2927,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3011,19 +2934,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramPostLiveItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="20" column="41" lean-forward="true" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3031,9 +2941,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
           <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3041,7 +2948,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3057,7 +2963,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramBroadcast.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
+        <state relative-caret-position="650">
           <caret line="28" column="37" lean-forward="false" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -3067,7 +2973,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/InstagramGetUserFollowersRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
+        <state relative-caret-position="338">
           <caret line="18" column="24" lean-forward="false" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
           <folding />
         </state>
@@ -3075,7 +2981,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/InstagramReelsTrayRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
+        <state relative-caret-position="494">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
             <element signature="e#324#325#0" expanded="true" />
@@ -3086,7 +2992,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/Instagram4Android.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
+        <state relative-caret-position="4134">
           <caret line="190" column="0" lean-forward="false" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
           <folding />
         </state>
@@ -3094,7 +3000,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramStoryTray.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
+        <state relative-caret-position="416">
           <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -3114,7 +3020,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramUserStoryFeedResult.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
+        <state relative-caret-position="156">
           <caret line="9" column="3" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -3124,7 +3030,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/InstagramUserStoryFeedRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
+        <state relative-caret-position="130">
           <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -3134,10 +3040,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/dev/niekirk/com/instagram4android/requests/payload/InstagramPostLiveItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/test/java/dev/niekirk/com/instagram4android/InstagramAndroidTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="25" column="48" lean-forward="true" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
+        <state relative-caret-position="234">
+          <caret line="49" column="41" lean-forward="true" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

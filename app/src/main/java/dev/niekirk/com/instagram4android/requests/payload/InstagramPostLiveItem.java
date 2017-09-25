@@ -1,5 +1,7 @@
 package dev.niekirk.com.instagram4android.requests.payload;
 
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +19,7 @@ public class InstagramPostLiveItem {
 
     public String pk;
     public InstagramUser user;
-    public InstagramBroadcast broadcasts;
+    public List<InstagramBroadcast> broadcasts;
     public String last_seen_broadcast_ts;
     public boolean can_reply;
     public int ranked_position;
