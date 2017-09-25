@@ -30,7 +30,7 @@ allprojects {
 Then add the following to your app level ```build.gradle``` file, use the version number of the latest release:
 ```Gradle
 dependencies {
-    compile 'com.github.charlieAndroidDev:Instagram4Android:v0.1.22'
+    compile 'com.github.charlieAndroidDev:Instagram4Android:v0.1.23'
 }
 ```
 
@@ -102,7 +102,7 @@ Very simple.
 
 ### Get stories (the ones you see at the top of your homepage)
 
-```
+```Java
 InstagramReelsTrayFeedResult result = instagram4Android.sendRequest(new InstagramReelsTrayRequest());
 List<InstagramStoryTray> trays = result.getTray();
 ```
@@ -111,7 +111,7 @@ List<InstagramStoryTray> trays = result.getTray();
 
 To get the rest of the story items for everyone in your reel tray do this:
 
-```
+```Java
 InstagramReelsTrayFeedResult result = instagram4Android.sendRequest(new InstagramReelsTrayRequest());
 List<InstagramStoryTray> trays = result.getTray();
 
