@@ -1,5 +1,8 @@
 package dev.niekirk.com.instagram4android.requests.payload;
 
+import android.os.Parcelable;
+
+import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
@@ -14,7 +17,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString(callSuper = true)
-public class InstagramFeedItem {
+public class InstagramFeedItem implements Serializable {
 
     public long taken_at;
     public long pk;
