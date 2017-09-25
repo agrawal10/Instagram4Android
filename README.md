@@ -7,7 +7,7 @@
 This library directly talks to the private Instagram API, anything (well quite a lot) you can do on the IG app you can replicate with this library.  You also bypass the public API's rate limits. 
 
 ## Credit
-This was originally a port of a popular [Java repository](https://github.com/brunocvcunha/instagram4j) that provides access to Instagrams' private API.  This has been changed around to use OkHttp and various other fixes have been made to make it work with Android.  I will be updating this with more endpoints and so on as time goes on, stories will be added soon.
+This was originally a port of a popular [Java repository](https://github.com/brunocvcunha/instagram4j) that provides access to Instagrams' private API.  This has been changed around to use OkHttp and various other fixes have been made to make it work with Android.  I will be updating this with more endpoints and so on as time goes on.
 
 Project not in any way afilliated with Instagram.
 
@@ -30,7 +30,7 @@ allprojects {
 Then add the following to your app level ```build.gradle``` file, use the version number of the latest release:
 ```Gradle
 dependencies {
-    compile 'com.github.charlieAndroidDev:Instagram4Android:v0.1.21'
+    compile 'com.github.charlieAndroidDev:Instagram4Android:v0.1.22'
 }
 ```
 
@@ -100,4 +100,34 @@ instagram.sendRequest(new InstagramFollowRequest(user.getPk()));
 
 Very simple.
 
-## Being updated currently...
+### Get stories (the ones you see at the top of your homepage)
+
+```
+InstagramReelsTrayFeedResult result = instagram4Android.sendRequest(new InstagramReelsTrayRequest());
+List<InstagramStoryTray> trays = result.getTray();
+```
+
+```trays``` now contains a list of ```InstagramStoryTray``` which, for the first few elements, will have a list of story items and info about the user whose story it is.  After the first 3-5 elements the list of story items will be null (We'll fix that below).
+
+To get the rest of the story items for everyone in your reel tray do this:
+
+```
+InstagramReelsTrayFeedResult result = instagram4Android.sendRequest(new InstagramReelsTrayRequest());
+List<InstagramStoryTray> trays = result.getTray();
+
+List<InstagramUserStoryFeedResult> userStories = new ArrayList<>();
+for(InstagramStoryTray tray : trays) {
+    if(tray != null) {
+        userStories.add(instagram4Android.sendRequest(new InstagramUserStoryFeedRequest("" + tray.getUser().getPk())));
+    }
+}
+
+// To print the url's of the first items in everyones story do this
+for(InstagramUserStoryFeedResult story : userStories) {
+    if(story.getReel() == null) {
+        System.out.println("Null check for safety, hardly ever null");
+    } else {
+        System.out.println(story.getReel().getItems().get(0).getImage_versions2().getCandidates().get(0).getUrl());
+    }
+}
+```
