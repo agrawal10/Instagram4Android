@@ -5,12 +5,20 @@ import org.junit.Test;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
+import dev.niekirk.com.instagram4android.requests.InstagramDirectShareRequest;
 import dev.niekirk.com.instagram4android.requests.InstagramReelsTrayRequest;
+import dev.niekirk.com.instagram4android.requests.InstagramSearchUsernameRequest;
+import dev.niekirk.com.instagram4android.requests.InstagramSuggestedBroadcastRequest;
 import dev.niekirk.com.instagram4android.requests.InstagramUserStoryFeedRequest;
+import dev.niekirk.com.instagram4android.requests.payload.InstagramBroadcast;
 import dev.niekirk.com.instagram4android.requests.payload.InstagramReelsTrayFeedResult;
+import dev.niekirk.com.instagram4android.requests.payload.InstagramSearchUsernameResult;
 import dev.niekirk.com.instagram4android.requests.payload.InstagramStoryTray;
+import dev.niekirk.com.instagram4android.requests.payload.InstagramSuggestedBroadcastResult;
+import dev.niekirk.com.instagram4android.requests.payload.InstagramUser;
 import dev.niekirk.com.instagram4android.requests.payload.InstagramUserStoryFeedResult;
 
 /**
@@ -20,8 +28,8 @@ import dev.niekirk.com.instagram4android.requests.payload.InstagramUserStoryFeed
 public class InstagramAndroidTest {
 
     // Replace with real credentials for actual testing
-    private static final String USERNAME = "hrvyfanboy";
-    private static final String PASSWORD = "Tiggy759";
+    private static final String USERNAME = "1000_follower_shoutout";
+    private static final String PASSWORD = "Checks759";
 
     private Instagram4Android instagram4Android;
 
@@ -36,22 +44,22 @@ public class InstagramAndroidTest {
         }
     }
 
+    /*
+    @Test
+    public void sendMessageIsSuccessful() throws IOException {
+
+        InstagramSearchUsernameResult result = instagram4Android.sendRequest(new InstagramSearchUsernameRequest("nieks759"));
+        instagram4Android.sendRequest(InstagramDirectShareRequest.builder(InstagramDirectShareRequest.ShareType.MESSAGE,
+                Arrays.asList("" + result.getUser().getPk())).message("Hello").build());
+
+    }*/
+
+
     @Test
     public void storiesWorking() throws IOException {
-        InstagramReelsTrayFeedResult result = instagram4Android.sendRequest(new InstagramReelsTrayRequest());
-        List<InstagramStoryTray> trays = result.getTray();
-        List<InstagramUserStoryFeedResult> userStories = new ArrayList<>();
-        for(InstagramStoryTray tray : trays) {
-            if(tray != null) {
-                userStories.add(instagram4Android.sendRequest(new InstagramUserStoryFeedRequest("" + tray.getUser().getPk())));
-            }
-        }
-        for(InstagramUserStoryFeedResult story : userStories) {
-            if(story.getReel() == null) {
-                System.out.println("NULL");
-            } else {
-                System.out.println(story.getReel().getItems().get(0).getImage_versions2().getCandidates().get(0).getUrl());
-            }
+        InstagramSuggestedBroadcastResult result = instagram4Android.sendRequest(new InstagramSuggestedBroadcastRequest());
+        for(InstagramBroadcast broadcast : result.getBroadcasts()) {
+            System.out.println(broadcast.getBroadcast_owner().getUsername());
         }
     }
 

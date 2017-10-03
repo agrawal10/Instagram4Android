@@ -60,7 +60,7 @@ public class InstagramDirectShareRequest extends InstagramRequest<StatusResult> 
     public StatusResult execute() throws IOException {
 
         String recipients = "\"" + TextUtils.join("\",\"", this.recipients.toArray(new String[0])) + "\"";
-
+        System.out.println("NULL" + message);
         MultipartBody body;
         if (shareType == ShareType.MEDIA) {
              body = new MultipartBody.Builder(api.getUuid())
@@ -68,15 +68,17 @@ public class InstagramDirectShareRequest extends InstagramRequest<StatusResult> 
                     .addFormDataPart("recipient_users", "[[" + recipients + "]]")
                     .addFormDataPart("client_context", InstagramGenericUtil.generateUuid(true))
                     .addFormDataPart("thread_ids", "[]")
-                    .addFormDataPart("text", message == null ? "" : message)
+                    .addFormDataPart("text", message.isEmpty() ? "" : message)
                     .build();
         } else {
+            System.out.println("EXECUTED");
             body = new MultipartBody.Builder(api.getUuid())
                     .addFormDataPart("recipient_users", "[[" + recipients + "]]")
                     .addFormDataPart("client_context", InstagramGenericUtil.generateUuid(true))
                     .addFormDataPart("thread_ids", "[]")
-                    .addFormDataPart("text", message == null ? "" : message)
+                    .addFormDataPart("text", message)
                     .build();
+            System.out.println("ELYTOI" + body.part(3).toString());
         }
 
         Request post = createHttpRequest(body);

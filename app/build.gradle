@@ -43,4 +43,5 @@ dependencies {
             [group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.8.6']
     )
     compile 'com.squareup.okhttp3:okhttp:3.8.1'
+    compile 'com.writingminds:FFmpegAndroid:0.3.2'
 }
