@@ -23,7 +23,6 @@ import dev.niekirk.com.instagram4android.requests.payload.InstagramSearchUsernam
 import dev.niekirk.com.instagram4android.requests.payload.InstagramStoryTray;
 import dev.niekirk.com.instagram4android.requests.payload.InstagramUserStoryFeedResult;
 import dev.niekirk.com.instagram4android.requests.payload.StatusResult;
-import lombok.SneakyThrows;
 
 import static org.junit.Assert.*;
 
@@ -38,23 +37,24 @@ public class ExampleInstrumentedTest {
     // Replace with real credentials for actual testing
     private static final String USERNAME = "1000_follower_shoutout";
     private static final String PASSWORD = "Checks759";
+    private static final String ACCESS_TOKEN = "6791105076.1677ed0.044af3da2e0748c8b392bd79a0b8a3df";
 
     private Instagram4Android instagram4Android;
 
     @Before
     public void init() {
-        instagram4Android = Instagram4Android.builder().username(USERNAME).password(PASSWORD).build();
+        //instagram4Android = Instagram4Android.builder().username(USERNAME).password(PASSWORD).build();
+        instagram4Android = Instagram4Android.builder().username(USERNAME).password(ACCESS_TOKEN).build();
         instagram4Android.setup();
         try {
-            instagram4Android.login();
+            instagram4Android.loginFb();
         } catch (IOException e) {
             //System.out.println(e.getMessage());
         }
     }
 
     @Test
-    @SneakyThrows
-    public void getMpdManifest() {
+    public void getMpdManifest() throws IOException {
 
         InstagramReelsTrayFeedResult result = instagram4Android.sendRequest(new InstagramReelsTrayRequest());
         List<InstagramStoryTray> trays = result.getTray();

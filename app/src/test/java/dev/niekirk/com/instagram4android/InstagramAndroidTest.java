@@ -28,17 +28,19 @@ import dev.niekirk.com.instagram4android.requests.payload.InstagramUserStoryFeed
 public class InstagramAndroidTest {
 
     // Replace with real credentials for actual testing
-    private static final String USERNAME = "1000_follower_shoutout";
+    private static final String USERNAME = "nieks759";
     private static final String PASSWORD = "Checks759";
+    private static final String ACCESS_TOKEN = "EAABdZAlX58O4BAC4GVXkKFoJSzFGQiDfpn59cAQuVPOKCfjhdoA15xXmfebOjK1XZAJZBMqNUHdFhZBUUNSu9FBNPQpaQM17y9eFKOzF5VeYg6wPBhCouvaTBrNRYEG8H5ZAXc0CNG5AdGe5yTOpRWo8pqMBXTZCda8ZAd4vGOhQ0PiXulnjqZAydNYyrT67i6Bn8XZBKYYeqGgoNRJtm5J72oAFadrOGs3wZD";
 
     private Instagram4Android instagram4Android;
 
     @Before
     public void init() {
-        instagram4Android = Instagram4Android.builder().username(USERNAME).password(PASSWORD).build();
+        instagram4Android = Instagram4Android.builder().username(USERNAME).password(ACCESS_TOKEN).build();
         instagram4Android.setup();
         try {
-            instagram4Android.login();
+            //instagram4Android.login();
+            instagram4Android.loginFb();
         } catch (IOException e) {
             //System.out.println(e.getMessage());
         }
@@ -57,9 +59,14 @@ public class InstagramAndroidTest {
 
     @Test
     public void storiesWorking() throws IOException {
-        InstagramSuggestedBroadcastResult result = instagram4Android.sendRequest(new InstagramSuggestedBroadcastRequest());
-        for(InstagramBroadcast broadcast : result.getBroadcasts()) {
-            System.out.println(broadcast.getBroadcast_owner().getUsername());
+        InstagramReelsTrayFeedResult result = instagram4Android.sendRequest(new InstagramReelsTrayRequest());
+        List<InstagramStoryTray> trays = result.getTray();
+
+        for(InstagramStoryTray tray : trays) {
+            if(tray.getUser().getUsername().equalsIgnoreCase("hrvy")) {
+                InstagramUserStoryFeedResult userResult = instagram4Android.sendRequest(new InstagramUserStoryFeedRequest("" + tray.getUser().getPk()));
+                System.out.println(userResult.getPost_live_item().getBroadcasts().get(0).getDash_manifest());
+            }
         }
     }
 

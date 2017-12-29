@@ -4,6 +4,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import dev.niekirk.com.instagram4android.requests.InstagramAutoCompleteUserListRequest;
+import dev.niekirk.com.instagram4android.requests.InstagramFbLoginRequest;
 import dev.niekirk.com.instagram4android.requests.InstagramGetInboxRequest;
 import dev.niekirk.com.instagram4android.requests.InstagramGetRecentActivityRequest;
 import dev.niekirk.com.instagram4android.requests.InstagramLoginRequest;
@@ -11,6 +12,7 @@ import dev.niekirk.com.instagram4android.requests.InstagramRequest;
 import dev.niekirk.com.instagram4android.requests.InstagramSyncFeaturesRequest;
 import dev.niekirk.com.instagram4android.requests.InstagramTimelineFeedRequest;
 import dev.niekirk.com.instagram4android.requests.internal.InstagramFetchHeadersRequest;
+import dev.niekirk.com.instagram4android.requests.payload.InstagramFbLoginPayload;
 import dev.niekirk.com.instagram4android.requests.payload.InstagramLoginPayload;
 import dev.niekirk.com.instagram4android.requests.payload.InstagramLoginResult;
 import dev.niekirk.com.instagram4android.requests.payload.InstagramSyncFeaturesPayload;
@@ -48,6 +50,9 @@ public class Instagram4Android {
     @Getter @Setter
     private String password;
 
+    @Getter @Setter
+    private String accessToken;
+
     @Getter
     protected boolean isLoggedIn;
 
@@ -77,13 +82,14 @@ public class Instagram4Android {
 
     public void setup() {
 
+        /*
         if (this.username.length() < 1) {
             throw new IllegalArgumentException("Username is mandatory.");
         }
 
         if (this.password.length() < 1) {
             throw new IllegalArgumentException("Password is mandatory.");
-        }
+        }*/
 
         this.deviceId = InstagramHashUtil.generateDeviceId(this.username, this.password);
         this.uuid = InstagramGenericUtil.generateUuid(true);
@@ -116,6 +122,43 @@ public class Instagram4Android {
                     }
                 })
                 .build();
+
+    }
+
+    public InstagramLoginResult loginFb() throws IOException {
+
+        InstagramFbLoginPayload loginRequest = InstagramFbLoginPayload.builder().dryrun(true)
+                .adid(InstagramGenericUtil.generateUuid(false))
+                .device_id(deviceId)
+                .access_token(password)
+                .phone_id(InstagramGenericUtil.generateUuid(false))
+                .waterfall_id(InstagramGenericUtil.generateUuid(false))
+                .build();
+
+        InstagramLoginResult loginResult = this.sendRequest(new InstagramFbLoginRequest(loginRequest));
+        if (loginResult.getStatus().equalsIgnoreCase("ok")) {
+            this.userId = loginResult.getLogged_in_user().getPk();
+            this.rankToken = this.userId + "_" + this.uuid;
+            this.isLoggedIn = true;
+
+            InstagramSyncFeaturesPayload syncFeatures = InstagramSyncFeaturesPayload.builder()
+                    ._uuid(uuid)
+                    ._csrftoken(getOrFetchCsrf(null))
+                    ._uid(userId)
+                    .id(userId)
+                    .experiments(InstagramConstants.DEVICE_EXPERIMENTS)
+                    .build();
+
+            this.sendRequest(new InstagramSyncFeaturesRequest(syncFeatures));
+            this.sendRequest(new InstagramAutoCompleteUserListRequest());
+            //this.sendRequest(new InstagramTimelineFeedRequest());
+            this.sendRequest(new InstagramGetInboxRequest());
+            this.sendRequest(new InstagramGetRecentActivityRequest());
+        }
+
+        System.out.println("Hello! --> " + loginResult.toString());
+
+        return loginResult;
 
     }
 
