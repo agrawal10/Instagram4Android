@@ -33,6 +33,7 @@ public abstract class InstagramPostRequest<T> extends InstagramRequest<T> {
                 .addHeader("X-IG-Capabilities", "3boBAA==")
                 .addHeader("X-IG-Connection-Type", "WIFI")
                 .addHeader("X-IG-Connection-Speed", "-1kbps")
+                .addHeader("X-IG-App-ID", "567067343352427")
                 .addHeader("User-Agent", InstagramConstants.USER_AGENT)
                 .post(RequestBody.create(MediaType.parse("application/x-www-form-urlencoded"), InstagramHashUtil.generateSignature(getPayload())))
                 .build();

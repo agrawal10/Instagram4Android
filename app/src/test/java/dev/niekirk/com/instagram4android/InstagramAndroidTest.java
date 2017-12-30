@@ -30,7 +30,8 @@ public class InstagramAndroidTest {
     // Replace with real credentials for actual testing
     private static final String USERNAME = "nieks759";
     private static final String PASSWORD = "Checks759";
-    private static final String ACCESS_TOKEN = "EAABdZAlX58O4BAC4GVXkKFoJSzFGQiDfpn59cAQuVPOKCfjhdoA15xXmfebOjK1XZAJZBMqNUHdFhZBUUNSu9FBNPQpaQM17y9eFKOzF5VeYg6wPBhCouvaTBrNRYEG8H5ZAXc0CNG5AdGe5yTOpRWo8pqMBXTZCda8ZAd4vGOhQ0PiXulnjqZAydNYyrT67i6Bn8XZBKYYeqGgoNRJtm5J72oAFadrOGs3wZD";
+    //private static final String ACCESS_TOKEN = "EAABwzLixnjYBAEpNU1KOuZBmPvGiZBzMHLZBAsAwzp1ElHjHvdGnz9ZACsPrO3OYl0OrwSpCHYi8oVwMpCJyjVIyZAPRCmx3zP3He0xY7z9Ve29DJCMlXSkYQ99bDMe0zEgaS3ZAMIHP9lVqTkXZCkIgpjNNoUZC2yQZD";
+    private static final String ACCESS_TOKEN = "EAABwzLixnjYBAKPLZCmZAVfHjbZAHCx4stOio87H5Ehf12rMy46NwgBO4NSxLSOsR3hQ4uiFZAaUEnfXbl0dvzbbZCSYp686Dn8gp9y5ZCAMZB9NM0YMkutP7881FVH86rEpZCWBlXK0ZBnJF4PCwCjvdwQu6kbcem7x31wZAP3CaEPNHmR10wjCra08xmuuyWAAd7kjdnb1ZAgewZDZD";
 
     private Instagram4Android instagram4Android;
 

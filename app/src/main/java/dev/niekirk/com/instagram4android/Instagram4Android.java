@@ -127,16 +127,21 @@ public class Instagram4Android {
 
     public InstagramLoginResult loginFb() throws IOException {
 
-        InstagramFbLoginPayload loginRequest = InstagramFbLoginPayload.builder().dryrun(true)
+        InstagramFbLoginPayload loginRequest = InstagramFbLoginPayload.builder()
+                .dryrun(true)
+                /*.username(username)*/
                 .adid(InstagramGenericUtil.generateUuid(false))
                 .device_id(deviceId)
-                .access_token(password)
+                .fb_access_token(password)
                 .phone_id(InstagramGenericUtil.generateUuid(false))
                 .waterfall_id(InstagramGenericUtil.generateUuid(false))
+                /*.allow_contacts_sync(true)
+                .big_blue_token(password)*/
                 .build();
 
         InstagramLoginResult loginResult = this.sendRequest(new InstagramFbLoginRequest(loginRequest));
         if (loginResult.getStatus().equalsIgnoreCase("ok")) {
+            System.out.println(loginResult.toString());
             this.userId = loginResult.getLogged_in_user().getPk();
             this.rankToken = this.userId + "_" + this.uuid;
             this.isLoggedIn = true;

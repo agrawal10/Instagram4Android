@@ -15,11 +15,13 @@ import lombok.ToString;
 @Builder
 public class InstagramFbLoginPayload {
     private boolean dryrun;
+    //private String username;
     private String phone_id;
     private String adid;
     private String device_id;
     private String waterfall_id;
-    private String access_token;
-
+    private String fb_access_token;
+    //private String big_blue_token;
+    //private boolean allow_contacts_sync;
 
 }
