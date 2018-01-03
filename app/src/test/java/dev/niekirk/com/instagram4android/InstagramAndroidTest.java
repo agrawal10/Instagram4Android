@@ -12,14 +12,19 @@ import dev.niekirk.com.instagram4android.requests.InstagramDirectShareRequest;
 import dev.niekirk.com.instagram4android.requests.InstagramReelsTrayRequest;
 import dev.niekirk.com.instagram4android.requests.InstagramSearchUsernameRequest;
 import dev.niekirk.com.instagram4android.requests.InstagramSuggestedBroadcastRequest;
+import dev.niekirk.com.instagram4android.requests.InstagramTimelineFeedRequest;
 import dev.niekirk.com.instagram4android.requests.InstagramUserStoryFeedRequest;
 import dev.niekirk.com.instagram4android.requests.payload.InstagramBroadcast;
 import dev.niekirk.com.instagram4android.requests.payload.InstagramReelsTrayFeedResult;
 import dev.niekirk.com.instagram4android.requests.payload.InstagramSearchUsernameResult;
 import dev.niekirk.com.instagram4android.requests.payload.InstagramStoryTray;
 import dev.niekirk.com.instagram4android.requests.payload.InstagramSuggestedBroadcastResult;
+import dev.niekirk.com.instagram4android.requests.payload.InstagramTimelineFeedItem;
+import dev.niekirk.com.instagram4android.requests.payload.InstagramTimelineFeedResult;
 import dev.niekirk.com.instagram4android.requests.payload.InstagramUser;
 import dev.niekirk.com.instagram4android.requests.payload.InstagramUserStoryFeedResult;
+
+import static junit.framework.Assert.assertEquals;
 
 /**
  * Created by root on 20/08/17.
@@ -58,6 +63,7 @@ public class InstagramAndroidTest {
     }*/
 
 
+    /*
     @Test
     public void storiesWorking() throws IOException {
         InstagramReelsTrayFeedResult result = instagram4Android.sendRequest(new InstagramReelsTrayRequest());
@@ -69,17 +75,18 @@ public class InstagramAndroidTest {
                 System.out.println(userResult.getPost_live_item().getBroadcasts().get(0).getDash_manifest());
             }
         }
-    }
+    }*/
 
-    /*
     @Test
     public void userFeedResultWorking() throws IOException {
-        InstagramFeedResult result = instagram4Android.sendRequest(new InstagramUserFeedRequest(instagram4Android.getUserId(), null, 0L));
+        InstagramTimelineFeedResult result = instagram4Android.sendRequest(new InstagramTimelineFeedRequest());
         if(result != null) {
-            System.out.println(result.getItems().get(0).getImage_versions2().getCandidates().get(0).getUrl());
+            for(InstagramTimelineFeedItem item : result.getFeed_items()) {
+                System.out.println(item.getMedia_or_ad().getCaption().get("text"));
+            }
         }
         assertEquals(1, 1);
-    }*/
+    }
 
     /*
     @Test

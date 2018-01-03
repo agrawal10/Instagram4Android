@@ -17,13 +17,17 @@ import java.util.List;
 import dev.niekirk.com.instagram4android.requests.InstagramDirectShareRequest;
 import dev.niekirk.com.instagram4android.requests.InstagramReelsTrayRequest;
 import dev.niekirk.com.instagram4android.requests.InstagramSearchUsernameRequest;
+import dev.niekirk.com.instagram4android.requests.InstagramTimelineFeedRequest;
 import dev.niekirk.com.instagram4android.requests.InstagramUserStoryFeedRequest;
 import dev.niekirk.com.instagram4android.requests.payload.InstagramReelsTrayFeedResult;
 import dev.niekirk.com.instagram4android.requests.payload.InstagramSearchUsernameResult;
 import dev.niekirk.com.instagram4android.requests.payload.InstagramStoryTray;
+import dev.niekirk.com.instagram4android.requests.payload.InstagramTimelineFeedItem;
+import dev.niekirk.com.instagram4android.requests.payload.InstagramTimelineFeedResult;
 import dev.niekirk.com.instagram4android.requests.payload.InstagramUserStoryFeedResult;
 import dev.niekirk.com.instagram4android.requests.payload.StatusResult;
 
+import static junit.framework.Assert.assertEquals;
 import static org.junit.Assert.*;
 
 /**
@@ -37,7 +41,7 @@ public class ExampleInstrumentedTest {
     // Replace with real credentials for actual testing
     private static final String USERNAME = "1000_follower_shoutout";
     private static final String PASSWORD = "Checks759";
-    private static final String ACCESS_TOKEN = "6791105076.1677ed0.044af3da2e0748c8b392bd79a0b8a3df";
+    private static final String ACCESS_TOKEN = "EAABwzLixnjYBAKPLZCmZAVfHjbZAHCx4stOio87H5Ehf12rMy46NwgBO4NSxLSOsR3hQ4uiFZAaUEnfXbl0dvzbbZCSYp686Dn8gp9y5ZCAMZB9NM0YMkutP7881FVH86rEpZCWBlXK0ZBnJF4PCwCjvdwQu6kbcem7x31wZAP3CaEPNHmR10wjCra08xmuuyWAAd7kjdnb1ZAgewZDZD";
 
     private Instagram4Android instagram4Android;
 
@@ -53,6 +57,18 @@ public class ExampleInstrumentedTest {
         }
     }
 
+    @Test
+    public void userFeedResultWorking() throws IOException {
+        InstagramTimelineFeedResult result = instagram4Android.sendRequest(new InstagramTimelineFeedRequest());
+        if(result != null) {
+            for(InstagramTimelineFeedItem item : result.getFeed_items()) {
+                Log.d("TEST", item.toString());
+            }
+        }
+        assertEquals(1, 1);
+    }
+
+    /*
     @Test
     public void getMpdManifest() throws IOException {
 

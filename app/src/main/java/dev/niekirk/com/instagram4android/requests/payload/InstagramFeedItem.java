@@ -40,6 +40,8 @@ public class InstagramFeedItem implements Serializable {
     public int original_height;
     public int view_count;
     public InstagramUser user;
+    public int dr_ad_type;
+    public List<InstagramCarouselMedia> carousel_media;
 
     public String organic_tracking_token;
     public int like_count;

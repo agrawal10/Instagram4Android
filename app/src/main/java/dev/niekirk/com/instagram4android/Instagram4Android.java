@@ -141,7 +141,7 @@ public class Instagram4Android {
 
         InstagramLoginResult loginResult = this.sendRequest(new InstagramFbLoginRequest(loginRequest));
         if (loginResult.getStatus().equalsIgnoreCase("ok")) {
-            System.out.println(loginResult.toString());
+            System.out.println(cookieStore.toString());
             this.userId = loginResult.getLogged_in_user().getPk();
             this.rankToken = this.userId + "_" + this.uuid;
             this.isLoggedIn = true;
@@ -204,6 +204,7 @@ public class Instagram4Android {
 
         return loginResult;
     }
+
 
     public String getOrFetchCsrf(HttpUrl url) throws IOException {
 
