@@ -83,6 +83,18 @@ private Observable<InstagramLoginResult> attemptLogin(final Instagram4Android in
 
 The String resource ```R.string.login_success``` is ```"ok"```.
 
+### Login with Facebook
+
+This is in beta right now hence the weird login flow.
+
+```Java
+Instagram4Android instagram = Instagram4Android.builder().username("").password(FACEBOOK_ACCESS_TOKEN).build();
+instagram.setup();
+InstagramLoginResult result = instagram.loginFb();
+```
+
+After that, the rest is the same.
+
 ### Get user info
 
 ```Java
