@@ -97,6 +97,7 @@ public class InstagramTimelineFeedRequest extends InstagramRequest<InstagramTime
                         .add("seen_posts", "")
                         .add("unseen_posts", "")
                         .add("feed_view_info", "")
+                        .add("reason", "pagination")
                         .add("max_id", maxId)
                         .build();
             } else {
@@ -116,6 +117,7 @@ public class InstagramTimelineFeedRequest extends InstagramRequest<InstagramTime
                         .add("seen_posts", posts)
                         .add("unseen_posts", "")
                         .add("feed_view_info", "")
+                        .add("reason", "pagination")
                         .add("max_id", maxId)
                         .build();
             }
