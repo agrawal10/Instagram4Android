@@ -33,6 +33,8 @@ dependencies {
     compile 'com.github.charlieAndroidDev:Instagram4Android:$VERSION'
 }
 ```
+Make sure your min sdk is 19 or higher in your app-level build.gradle, like [this](https://i.imgur.com/DcopQLm.png).
+
 
 ## Instructions
 
