@@ -3,12 +3,14 @@ package dev.niekirk.com.instagram4android.requests;
 import dev.niekirk.com.instagram4android.InstagramConstants;
 import dev.niekirk.com.instagram4android.requests.payload.InstagramGetMediaCommentsResult;
 
+import lombok.AllArgsConstructor;
 import lombok.NonNull;
 
 /**
  * Created by root on 09/06/17.
  */
 
+@AllArgsConstructor
 public class InstagramGetMediaCommentsRequest extends InstagramGetRequest<InstagramGetMediaCommentsResult> {
 
     @NonNull
