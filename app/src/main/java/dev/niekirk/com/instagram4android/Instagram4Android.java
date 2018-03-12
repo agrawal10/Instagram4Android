@@ -102,6 +102,7 @@ public class Instagram4Android {
                         if (cookies != null) {
                             for (Cookie cookie : cookies) {
                                 cookieStore.put(cookie.name(), cookie);
+                            }
                         }
                     }
 
