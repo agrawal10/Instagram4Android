@@ -99,25 +99,21 @@ public class Instagram4Android {
 
                     @Override
                     public void saveFromResponse(HttpUrl url, List<Cookie> cookies) {
-                        //Log.d("I4A", "Added cookies!");
-                        cookieStore.addAll(cookies);
+                        if (cookies != null) {
+                            for (Cookie cookie : cookies) {
+                                cookieStore.put(cookie.name(), cookie);
+                        }
                     }
 
                     @Override
                     public List<Cookie> loadForRequest(HttpUrl url) {
                         List<Cookie> validCookies = new ArrayList<>();
-                        for(Cookie cookie: cookieStore) {
-
-                            //Log.d("I4A", "Cookie: " + cookie.name());
-
-                            if(cookie.expiresAt() < System.currentTimeMillis()) {
-
-                            } else {
+                        for (Map.Entry<String, Cookie> entry : cookieStore.entrySet()) {
+                            Cookie cookie = entry.getValue();
+                            if(cookie.expiresAt() >= System.currentTimeMillis()) {
                                 validCookies.add(cookie);
                             }
-
                         }
-
                         return validCookies;
                     }
                 })
