@@ -22,9 +22,9 @@ import dev.niekirk.com.instagram4android.util.InstagramHashUtil;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.HashMap;
 import java.util.List;
-import java.util.Set;
+import java.util.Map;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -71,7 +71,7 @@ public class Instagram4Android {
     @Getter
     protected OkHttpClient client;
 
-    private final Set<Cookie> cookieStore = new HashSet<>();
+    private final HashMap<String, Cookie> cookieStore = new HashMap<>();
 
     @Builder
     public Instagram4Android(String username, String password) {
