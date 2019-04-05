@@ -111,6 +111,22 @@ InstagramUser user = result.getUser();
 
 Send the request using your ```Instagram4Android``` instance, and then call ```getUser()``` on the result.  Now poke around and see what info you can get from that ```user``` object.
 
+#### Get follower list
+
+Instagram's API paginates follower lists (to about 200 per page), 
+so you will have to keep sending requests if you want the full list.
+Be warned that this means, if you are sending requests at a rate of 1 per second, 
+it will take a minute for every 12,000 followers - if you ran this on @instagram, it would take 2 weeks!
+
+```Java
+InstagramGetUserFollowersResult result = instagram.sendRequest(new InstagramGetUserFollowersRequest(user.getPk()));
+ArrayList<InstagramUserSummary> users = new ArrayList<>(result.users);
+while (result.next_max_id != null) {
+    result = instagram.sendRequest(new InstagramGetUserFollowersRequest(user.getPk(), result.next_max_id));
+    users.addAll(result.users);
+}
+```
+
 ### Follow user
 
 ```Java
